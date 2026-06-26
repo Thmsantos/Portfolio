@@ -14,14 +14,6 @@ O projeto foi desenvolvido priorizando:
 
 * Organização e clareza visual
 * Performance e simplicidade
-* Experiência do usuário
-* Estrutura limpa e escalável
-
----
-
-## 🌐 Demonstração
-
-👉 Em breve
 
 ---
 
@@ -35,23 +27,11 @@ Tenho experiência no desenvolvimento de aplicações voltadas para ambientes re
 
 ## 🧩 Seções do portfólio
 
-✔️ Apresentação (Header estilo GitHub)
-✔️ Hard Skills (stack visual com ícones)
+✔️ Apresentação 
+✔️ Hard Skills
 ✔️ Experiência profissional
 ✔️ Projetos
 ✔️ Educação
-
----
-
-## 💻 Projetos em destaque
-
-### 🏥 Sistema de Gestão de Pacientes
-
-Plataforma para gerenciamento de dados clínicos, com foco em organização, histórico e integração de informações.
-
-### 📱 App de Bioimpedância com IA
-
-Aplicação para análise corporal com foco em leitura de exames e acompanhamento de evolução física.
 
 ---
 
@@ -65,11 +45,7 @@ Aplicação para análise corporal com foco em leitura de exames e acompanhament
 
 ## ⚙️ Tecnologias utilizadas
 
-* HTML, CSS
-* Node.js
-* MongoDB, PostgreSQL
-* Docker
-* Integração de APIs
+* HTML, CSS, GitHub Pages
 
 ---
 
@@ -101,14 +77,6 @@ Este portfólio foi criado para:
 * Demonstrar minhas habilidades na prática
 * Servir como vitrine para recrutadores e empresas
 * Documentar minha evolução como desenvolvedor
-
----
-
-## 📬 Contato
-
-* LinkedIn: (adicione aqui)
-* Email: (adicione aqui)
-* GitHub: (seu perfil)
 
 ---
 
