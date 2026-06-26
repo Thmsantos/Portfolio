@@ -1,7 +1,12 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: #0d1117;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
@@ -11,152 +16,166 @@
   --border: #30363d;
   --text: #e6edf3;
   --muted: #8b949e;
-  --accent: #58a6ff;
 
-  background: var(--bg);
   color: var(--text);
-  min-height: 100vh;
-  transition: 0.3s ease;
-}
-
-#theme:checked ~ .page {
-  --bg: #f5f7fa;
-  --card: #ffffff;
-  --border: #d0d7de;
-  --text: #0d1117;
-  --muted: #57606a;
-  --accent: #0969da;
-}
-
-body {
-  background: var(--bg);
-}
-
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
-}
-
-.theme-toggle input {
-  display: none;
-}
-
-.theme-toggle label {
-  width: 55px;
-  height: 28px;
-  background: var(--card);
-  display: block;
-  border-radius: 50px;
-  cursor: pointer;
-  position: relative;
-  border: 1px solid var(--border);
-  transition: 0.3s;
-}
-
-.theme-toggle label::after {
-  content: "🌙";
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  top: 2px;
-  left: 3px;
-  background: var(--accent);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  transition: 0.3s;
-}
-
-#theme:checked + label::after {
-  left: calc(100% - 25px);
-  content: "☀️";
-}
-
-.header {
-  background: linear-gradient(135deg, var(--card), var(--bg));
-  padding: 60px 20px;
-  transition: 0.3s;
-}
-
-.header-content {
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid var(--border);
 }
 
 .section {
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 70px auto;
   padding: 0 20px;
 }
 
 .section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
+  font-size: 1.4rem;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--card), var(--bg));
+  padding: 70px 20px;
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+}
+
+.info {
+  max-width: 650px;
+}
+
+.info h1 {
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.bio p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.bio .highlight {
+  color: var(--text);
+  font-weight: 500;
 }
 
 .skills img {
-  max-width: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
 }
 
-.accordion .item {
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
   border: 1px solid var(--border);
   border-radius: 10px;
-  margin-bottom: 10px;
   overflow: hidden;
+  background: var(--card);
 }
 
-.accordion input {
+input {
   display: none;
 }
 
 .title {
   display: flex;
-  justify-content: space-between;
-  padding: 18px;
+  flex-direction: column;
+  padding: 18px 20px;
   cursor: pointer;
-  background: var(--card);
+  position: relative;
+  transition: 0.2s;
+}
+
+.title:hover {
+  background: #1f2630;
+}
+
+.period {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 5px;
 }
 
 .title::after {
   content: "▼";
-  transition: 0.3s ease;
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  transition: 0.3s;
 }
 
 .content {
   max-height: 0;
   overflow: hidden;
-  padding: 0 18px;
-  color: var(--muted);
-  transition: all 0.35s ease-in-out;
+  transition: max-height 0.35s ease;
 }
 
-input:checked + .title + .content {
-  max-height: 200px;
-  padding: 15px 18px;
+input:checked+.title+.content {
+  max-height: 500px;
 }
 
-input:checked + .title::after {
+input:checked+.title::after {
   transform: rotate(180deg);
 }
 
+.exp-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+  align-items: flex-start;
+}
 
-@media (max-width: 600px) {
+.exp-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 6px;
+}
+
+.exp-text {
+  flex: 1;
+}
+
+.exp-text p {
+  font-size: 0.93rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
   .header-content {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+  }
+
+  .exp-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 }
